@@ -1,0 +1,70 @@
+punishment_cmd: "kick %player% [SkyAC] Unfair Advantage: %check%"
+rubberband_on_flag: true
+
+checks:
+  fly:
+    enabled: true
+    max_vl: 20
+  speed:
+    enabled: true
+    max_vl: 15
+    threshold: 0.05
+  timer:
+    enabled: true
+    max_vl: 15
+    min_average: 46.0
+  reach:
+    enabled: true
+    max_vl: 10
+    max_reach: 3.1
+  killaura:
+    enabled: true
+    max_vl: 10
+    min_dot: 0.7
+  badpackets:
+    enabled: true
+    max_vl: 5
+  autoclicker:
+    enabled: true
+    max_vl: 12
+    max_cps: 18
+    min_deviation: 5.0
+  noslow:
+    enabled: true
+    max_vl: 10
+    max_speed: 0.18
+  fastbow:
+    enabled: true
+    max_vl: 8
+    min_charge_time: 150.0
+  nofall:
+    enabled: true
+    max_vl: 10
+  jesus:
+    enabled: true
+    max_vl: 8
+  phase:
+    enabled: true
+    max_vl: 8
+  velocity:
+    enabled: true
+    max_vl: 10
+    min_ratio: 0.4
+  fastbreak:
+    enabled: true
+    max_vl: 8
+  invmove:
+    enabled: true
+    max_vl: 10
+  scaffold:
+    enabled: true
+    max_vl: 8
+  airplace:
+    enabled: true
+    max_vl: 8
+  step:
+    enabled: true
+    max_vl: 6
+  noweb:
+    enabled: true
+    max_vl: 8

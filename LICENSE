@@ -1,0 +1,27 @@
+THE OKAY-ISH LICENSE
+Version 1.0 (June 2026)
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. DEFINITIONS
+"Software" refers to the computer program, library, or suite of scripts and all associated source code, binaries, configuration files, and assets licensed under this License.
+"Licensor" refers to the copyright holder(s) of the Software.
+"You" (or "Your") refers to an individual or legal entity exercising permissions granted by this License.
+
+2. GRANT OF LICENSE
+Subject to the terms of this License, Licensor hereby grants You a worldwide, royalty-free, non-exclusive, perpetual license to:
+a. Use, execute, run, and host the Software.
+b. Study, inspect, and modify the source code of the Software.
+c. Distribute verbatim copies or modified versions of the Software's source code.
+
+3. NETWORK DISCLOSURE AND STRONG COPYLEFT (THE "NO-LOOPHOLE" CONDITIONS)
+Your right to use, modify, and distribute the Software is strictly conditioned on compliance with the following:
+a. Source Code Availability: If You host, run, or deploy a modified or unmodified version of the Software on a server, system, or platform that interacts with users or clients over a network, You MUST make the complete, machine-readable source code of Your version of the Software available to all connecting users, clients, and the public, free of charge, under this same License.
+b. ShareAlike: Any derivative work, port, or modified version of this Software that You distribute or host must be licensed under this License and no other. You cannot add additional restrictions.
+c. Anti-Rebranding: You must retain all original copyright notices, developer attributions, and licensing headers in all source files and user-facing administration interfaces.
+
+4. COMMERCIAL RESTRICTIONS
+You may not sell, lease, or charge licensing fees for the Software, modified versions of the Software, or proprietary wrappers enclosing the Software as a standalone product. Any distribution must be entirely free of charge.
+
+5. NO WARRANTY AND LIMITATION OF LIABILITY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
