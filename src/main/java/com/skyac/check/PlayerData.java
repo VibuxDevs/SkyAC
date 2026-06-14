@@ -20,6 +20,10 @@ import com.skyac.check.impl.ScaffoldCheck;
 import com.skyac.check.impl.AirPlaceCheck;
 import com.skyac.check.impl.StepCheck;
 import com.skyac.check.impl.NoWebCheck;
+import com.skyac.check.impl.FastPlaceCheck;
+import com.skyac.check.impl.CriticalsCheck;
+import com.skyac.check.impl.EntityFlyCheck;
+import com.skyac.check.impl.FastEatCheck;
 import org.bukkit.entity.Player;
 
 import java.lang.reflect.Field;
@@ -38,6 +42,7 @@ public class PlayerData {
 
     private org.bukkit.Location lastValidLocation;
     private boolean needsSetback = false;
+    private long lastUseItemTime = 0;
 
     public PlayerData(Player player, SkyAC plugin) {
         this.player = player;
@@ -63,6 +68,10 @@ public class PlayerData {
         checks.add(new AirPlaceCheck(this));
         checks.add(new StepCheck(this));
         checks.add(new NoWebCheck(this));
+        checks.add(new FastPlaceCheck(this));
+        checks.add(new CriticalsCheck(this));
+        checks.add(new EntityFlyCheck(this));
+        checks.add(new FastEatCheck(this));
     }
 
     public boolean handlePacket(Object packet, boolean isIncoming) {
@@ -70,6 +79,8 @@ public class PlayerData {
             String packetName = packet.getClass().getSimpleName();
             if (packetName.equals("PacketPlayInFlying") || packetName.equals("PacketPlayInPosition") || packetName.equals("PacketPlayInPositionLook")) {
                 tickVelocity();
+            } else if (packetName.equals("PacketPlayInBlockPlace")) {
+                lastUseItemTime = System.currentTimeMillis();
             }
         } else {
             String name = packet.getClass().getSimpleName();
@@ -158,5 +169,19 @@ public class PlayerData {
 
     public SkyAC getPlugin() {
         return plugin;
+    }
+
+    public long getLastUseItemTime() {
+        return lastUseItemTime;
+    }
+
+    @SuppressWarnings("unchecked")
+    public <T extends Check> T getCheck(Class<T> clazz) {
+        for (Check check : checks) {
+            if (clazz.isInstance(check)) {
+                return (T) check;
+            }
+        }
+        return null;
     }
 }

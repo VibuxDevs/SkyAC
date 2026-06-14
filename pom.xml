@@ -25,11 +25,18 @@
     </repositories>
 
     <dependencies>
-        <!-- Spigot API (includes Netty) -->
+        <!-- Spigot API -->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.16.5-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Netty for packet interception -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.25.Final</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

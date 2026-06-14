@@ -11,6 +11,7 @@ A high-performance, packet-level, reflection-based Minecraft Anti-Cheat skeleton
   - `Killaura`: Monitors player camera rotation angle (Yaw/Pitch) alignment with targets on attack packets, adjusting for vertical eye-to-target height.
   - `AutoClicker`: Analyzes click rate and computes click interval standard deviation to detect click macros.
   - `FastBow`: Restricts bows from firing faster than physics thresholds.
+  - `Criticals`: Detects jump/fall critical hit packet spoofing when vertical offsets indicate ground alignment.
 - **Movement Checks**:
   - `Fly`: Validates hovering and vertical motion against server-side ground states.
   - `Speed`: Dynamic distance validation factoring in potion speeds and sprinting multipliers.
@@ -21,11 +22,14 @@ A high-performance, packet-level, reflection-based Minecraft Anti-Cheat skeleton
   - `Step`: Restricts instantaneous vertical movement greater than 0.6 blocks.
   - `NoWeb`: Validates speed limitations when standing inside cobweb blocks.
   - `InvMove`: Rejects window clicks while moving at high horizontal velocities.
+  - `EntityFly`: Prevents speed hacks and fly hacks while riding non-player entities/vehicles.
 - **Packet & Block Interaction Verification**:
   - `Timer`: Tracks packet intervals using a rolling average window.
   - `BadPackets`: Sanitizes coordinates (NaN/Infinities) and pitch limits.
   - `Velocity`: Evaluates expected server-sent knockback against client movement responses.
   - `FastBreak`: Compares start-digging and stop-digging packet timestamps to prevent instant break hacks.
+  - `FastPlace`: Compares sequential block placement delays to prevent instant placement exploits.
+  - `FastEat`: Enforces the 1.6-second consumable usage duration limits.
   - `Scaffold`: Blocks placing blocks below the feet level without looking down (pitch >= 70).
   - `AirPlace`: Rejects placement packets targeting non-liquid air block coordinates.
 

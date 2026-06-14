@@ -67,4 +67,8 @@ public class NettyInjector {
         Field channelField = networkManager.getClass().getField("channel");
         return (Channel) channelField.get(networkManager);
     }
+
+    public PlayerData getPlayerData(Player player) {
+        return dataMap.get(player.getUniqueId());
+    }
 }
